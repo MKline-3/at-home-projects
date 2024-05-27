@@ -90,10 +90,10 @@ def activity(data):
         print('Listening stopped')
         return listening
     
-    elif re.search("created you") or re.search("made you"):
+    elif re.search("created you", data) or re.search("made you", data):
         listening = True
         message = 'This instance was created by Matt Kline.'
-        return listening
+        response(message)
 
     # search keyword
     else:
